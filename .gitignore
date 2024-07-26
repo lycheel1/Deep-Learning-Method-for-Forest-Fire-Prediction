@@ -1,0 +1,8 @@
+*.log
+*.npy
+__pycache__/
+*/__pycache__
+.idea/
+data/
+NN_models/
+*/model_performance*/
