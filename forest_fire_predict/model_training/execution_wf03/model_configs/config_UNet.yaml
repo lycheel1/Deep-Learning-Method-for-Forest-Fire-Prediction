@@ -1,0 +1,29 @@
+model:
+  model_name: "UNet"
+  feature_1d: 51
+  module: "NN_models.models_wf03.Unet"
+  class: "Custom_UNet"
+
+data:
+  train:
+    1d: ""
+    2d: ""
+    y: ""
+  val:
+    1d: ""
+    2d: ""
+    y: ""
+  train_path: "D:/Waterloo/Masc/Wildfire/Wildfire_Project/forest_fire_predict/data/dataset_wf03"
+  save_path:  "F:/Code/model_training/model_performance_wf03/UNet"
+  ds_name: "wf03"
+
+model_train:
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 32
+  epochs: 30
+  k_folds: 5
+
+logging:
+  log_dir: "logs"
+  level: "INFO"

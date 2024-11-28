@@ -1,0 +1,8 @@
+*.log
+*.npy
+__pycache__/
+*/__pycache__
+.idea/
+NN_models/models_wf02
+*/model_performance*/
+personal_debugging/
