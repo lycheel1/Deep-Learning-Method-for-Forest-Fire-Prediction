@@ -14,7 +14,7 @@ data:
     1d: ""
     2d: ""
     y: ""
-  train_path: "D:/Waterloo/Masc/Wildfire/Wildfire_Project/forest_fire_predict/data/dataset_wf03"
+  train_path: "D:/Waterloo/Masc/Wildfire/Wildfire_Project/data/dataset_wf03"
   save_path:  "F:/Code/model_training/model_performance_wf03/Firecast"
   ds_name: "wf03"
 

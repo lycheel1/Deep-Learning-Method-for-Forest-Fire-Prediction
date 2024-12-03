@@ -45,11 +45,11 @@ def scheduler_make(optimizer):
 
 if __name__ == '__main__':
     ### you could choose to overwrite the config read from the yaml ###
-    dataset_folder_overwrite = "D:/Waterloo/Masc/Wildfire/Wildfire_Project/forest_fire_predict/data/dataset_wf03"
+    dataset_folder_overwrite = "D:/Waterloo/Masc/Wildfire/Wildfire_Project/data/dataset_wf03"
     save_path_without_model_name_overwrite = "F:/Code/model_training/model_performance_wf03"
 
 
-    config = load_config('model_configs/config_AAUnet11.yaml')
+    config = load_config('model_configs/config_SwinUnet.yaml')
 
     ds_name = config['data']['ds_name']
     aug = '' #_augXX
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     if save_path_without_model_name_overwrite is None:
         save_path = config['data']['save_path']
     else:
-        save_path = f'{save_path_without_model_name_overwrite}{network_name}{net_suffix}'
+        save_path = f'{save_path_without_model_name_overwrite}/{network_name}{net_suffix}'
 
     train_set_suffix = f'train{aug}'
 
