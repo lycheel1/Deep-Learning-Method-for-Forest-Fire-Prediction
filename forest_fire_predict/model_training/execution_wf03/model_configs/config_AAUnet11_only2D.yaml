@@ -1,8 +1,8 @@
 model:
-  model_name: "AAUnet11_2Donly"
+  model_name: "AAUnet11_only2D"
   feature_1d: 51
-  module: "NN_models.models_wf03.ASPCUnet11_2Donly"
-  class: "Custom_ASPCUNet11_2Donly"
+  module: "NN_models.models_wf03.AAUnet11_only2D"
+  class: "Custom_ASPCUNet11_only2D"
 
 data:
   train:
@@ -14,7 +14,7 @@ data:
     2d: ""
     y: ""
   train_path: "D:/Waterloo/Masc/Wildfire/Wildfire_Project/data/dataset_wf03"
-  save_path:  "F:/Code/model_training/model_performance_wf03/AAUNet11_2Donly"
+  save_path:  "F:/Code/model_training/model_performance_wf03/AAUNet11_only2D"
   ds_name: "wf03"
 
 model_train:

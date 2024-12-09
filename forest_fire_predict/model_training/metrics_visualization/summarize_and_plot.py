@@ -84,7 +84,7 @@ def calculate_and_save_avg_metrics(best_kfold_csv_path, save_path, output_name):
     print(f"Average metrics saved to {avg_csv_path}")
 
 if __name__ == '__main__':
-    config = load_config('../execution_wf03/model_configs/config_SwinUnet.yaml')
+    config = load_config('../execution_wf03/model_configs/config_UNet3p_only2D.yaml')
 
     ds_name = config['data']['ds_name']
     aug = '' #_augXX

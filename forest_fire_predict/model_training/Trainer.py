@@ -14,9 +14,10 @@ from util.matrices_computation import calculate_metrics, calculate_AUC
 
 class WF01_Trainer():
     def __init__(self, model_make, train_set, test_set, k_folds, epochs, batch_size, criterion_make, optimizer_make,
-                 scheduler_make, random_seed):
+                 scheduler_make, random_seed, skip_list=None):
         # define some basic parameters
         self.random_seed = random_seed
+        self.skip_list = skip_list
 
         self.model = None
         self.model_make = model_make
@@ -39,6 +40,7 @@ class WF01_Trainer():
 
         self._gpu_check()
         self._randomness_contrtol()
+
 
     def _randomness_contrtol(self):
         torch.manual_seed(self.random_seed)
@@ -171,6 +173,11 @@ class WF01_Trainer():
 
         for fold, (train_ids, val_ids) in enumerate(kf.split(self.train_set)):
             print(f'Fold {fold}/{self.k_folds-1}...')
+
+            if self.skip_list is not None:
+                if fold in self.skip_list:
+                    print("Skip this fold, continue to the next fold")
+                    continue
 
             # create new model, optimizor and schedular
             self._reset_models()

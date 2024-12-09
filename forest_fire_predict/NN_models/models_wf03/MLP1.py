@@ -4,9 +4,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class custom_MLP1(nn.Module):
+class Custom_MLP1(nn.Module):
     def __init__(self, num_1d_features=51):
-        super(custom_MLP1, self).__init__()
+        super(Custom_MLP1, self).__init__()
 
         self.MLP1 = nn.Sequential(nn.Linear(in_features=5*64*64+num_1d_features, out_features=128),
                                   nn.ReLU(inplace=True),

@@ -1,6 +1,5 @@
 model:
-  model_name: "Firecast
-  "
+  model_name: "Firecast"
   feature_1d: 51
   module: "NN_models.models_wf03.Firecast"
   class: "Custom_Firecast"

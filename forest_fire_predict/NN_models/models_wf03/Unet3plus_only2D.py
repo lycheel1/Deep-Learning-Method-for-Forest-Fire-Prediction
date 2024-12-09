@@ -7,10 +7,10 @@ from NN_models.models_wf02.embedding_block import Embedding_block
 from NN_models.models_wf02.hybrid_bottleneck import Hybrid_Bottleneck
 
 
-class Custom_UNet3Plus_2Donly(nn.Module):
+class Custom_UNet3Plus_only2D(nn.Module):
     def __init__(self, n_channels=5+8-1, n_classes=1, bilinear=True, feature_scale=4,
                  is_deconv=True, is_batchnorm=True, num_1d_features=51):
-        super(Custom_UNet3Plus_2Donly, self).__init__()
+        super(Custom_UNet3Plus_only2D, self).__init__()
 
         self.fuel_embedding = Embedding_block(embedding_dim=8)
 

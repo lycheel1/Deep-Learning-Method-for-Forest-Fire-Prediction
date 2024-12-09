@@ -49,7 +49,7 @@ if __name__ == '__main__':
     save_path_without_model_name_overwrite = "F:/Code/model_training/model_performance_wf03"
 
 
-    config = load_config('model_configs/config_SwinUnet.yaml')
+    config = load_config('model_configs/config_UNet3p_only2D.yaml')
 
     ds_name = config['data']['ds_name']
     aug = '' #_augXX

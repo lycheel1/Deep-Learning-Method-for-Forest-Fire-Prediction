@@ -5,9 +5,9 @@ from NN_models.models_wf02.embedding_block import Embedding_block
 import torch.nn.functional as F
 
 
-class custom_Firecast(nn.Module):
+class Custom_Firecast(nn.Module):
     def __init__(self, in_channels=5+8-1, num_1d_features=51):
-        super(custom_Firecast, self).__init__()
+        super(Custom_Firecast, self).__init__()
 
         self.fuel_embedding = Embedding_block(embedding_dim=8)
 
